@@ -1,0 +1,36 @@
+{
+    "kind": "collectionType",
+    "collectionName": "work_steps",
+    "info": {
+        "singularName": "work-step",
+        "pluralName": "work-steps",
+        "displayName": "Work Step",
+        "description": "How it works steps"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        },
+        "stepNumber": {
+            "type": "integer",
+            "required": true
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

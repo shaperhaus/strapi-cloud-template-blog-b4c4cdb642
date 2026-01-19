@@ -1,0 +1,60 @@
+{
+    "kind": "collectionType",
+    "collectionName": "products",
+    "info": {
+        "singularName": "product",
+        "pluralName": "products",
+        "displayName": "Product",
+        "description": "Smart home products and recommendations"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "richtext",
+            "required": true
+        },
+        "price": {
+            "type": "decimal"
+        },
+        "affiliateLink": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "category": {
+            "type": "enumeration",
+            "enum": [
+                "lighting",
+                "sensors",
+                "hubs",
+                "switches",
+                "cameras",
+                "locks",
+                "thermostats",
+                "other"
+            ],
+            "default": "other"
+        },
+        "brand": {
+            "type": "string"
+        },
+        "rating": {
+            "type": "decimal",
+            "min": 0,
+            "max": 5
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "kind": "collectionType",
+    "collectionName": "possibilities",
+    "info": {
+        "singularName": "possibility",
+        "pluralName": "possibilities",
+        "displayName": "Possibility",
+        "description": "Smart home possibilities and solutions"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        },
+        "icon": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "category": {
+            "type": "enumeration",
+            "enum": [
+                "lighting",
+                "security",
+                "energy",
+                "comfort",
+                "convenience"
+            ],
+            "default": "convenience"
+        },
+        "order": {
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

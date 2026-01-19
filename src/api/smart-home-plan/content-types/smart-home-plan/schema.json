@@ -1,0 +1,47 @@
+{
+    "kind": "collectionType",
+    "collectionName": "smart_home_plans",
+    "info": {
+        "singularName": "smart-home-plan",
+        "pluralName": "smart-home-plans",
+        "displayName": "Smart Home Plan",
+        "description": "User-generated smart home plans"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "userEmail": {
+            "type": "email"
+        },
+        "surveyResponses": {
+            "type": "json",
+            "required": true
+        },
+        "generatedSolutions": {
+            "type": "richtext"
+        },
+        "rooms": {
+            "type": "json"
+        },
+        "products": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::product.product"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "draft",
+                "generated",
+                "purchased",
+                "completed"
+            ],
+            "default": "draft"
+        },
+        "totalEstimatedCost": {
+            "type": "decimal"
+        }
+    }
+}
